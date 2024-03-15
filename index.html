@@ -85,6 +85,7 @@
         
 
         var final = '';
+        var final2 = '';
         var contador = 0;
 
         var carac = [...texto];
@@ -102,6 +103,7 @@
                     //console.log(i)
                     if (c.innerHTML == b.innerHTML) {
                         final += '&#' + i + ';';
+                        final2 += c.innerHTML+' = ' + i + '<br>';
                         break;
                     }
                 }
@@ -109,7 +111,7 @@
             });
 
             b.innerHTML = 'Resultado:';
-            c.innerHTML = '<font style="color:lime">'+final+'</font>';
+            c.innerHTML = '<font style="color:yellow">'+final2+'</font><br><br>Código completo:';
             criarArea(final);
             document.getElementById('bt').textContent = 'Buscar';
         }, 1000);
